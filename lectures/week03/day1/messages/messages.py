@@ -1,0 +1,5 @@
+welcome="Welcome to our magical game!"
+playerName="Would you please give us your name\n\n"
+otherPlayerName="Please give us your name Player 2\n\n"
+noGame="Sorry to see you go"
+yesGame="Thats great, do you know where that question is from?"
