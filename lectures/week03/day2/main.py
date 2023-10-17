@@ -25,7 +25,7 @@ class AnimalType:
 
 class Animal(AnimalType):
     def __init__(self, data, name, age):
-        super(data)
+        super().__init__(data.appendages, data.climate, data.foodType, data.species, data.id)
         self.name = name
         self.age = age
     
