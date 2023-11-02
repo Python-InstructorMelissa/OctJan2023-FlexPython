@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% block head %} {% include 'blockFiles/head.html' %} {% endblock head %}
+<body>
+    {% block header %} {% include 'blockFiles/header.html' %} {% endblock header %}
+    <main>
+        <h1>FakeData HTML</h1>
+        {% for park in parks %}
+            <h2>{{park.name}} - {{park.location}}</h2>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Species</th>
+                    <th>View</th>
+                </tr>
+                {% for animal in park.animals %}
+                    <tr>
+                        <td>{{animal.name}}</td>
+                        <td>{{animal.species}}</td>
+                        <td><a href="/animal/{{animal.id}}">View</a></td>
+                    </tr>
+                {% endfor %}
+            </table>
+        {% endfor %}
+    </main>
+    {% block footer %} {% include 'blockFiles/footer.html' %} {% endblock footer %}
+</body>
+</html>
