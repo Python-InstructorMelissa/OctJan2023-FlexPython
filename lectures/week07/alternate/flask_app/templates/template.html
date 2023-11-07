@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <title>Week 6</title>
+    </head>
+    <!-- {% block head %} {% include 'blockFiles/head.html' %} {% endblock head %} -->
+<body>
+    <header>
+        <h1>{{root.title}}</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/fakeData/">Hard Coded Example</a>
+        </nav>
+        <!-- {% block nav %} {% include 'blockFiles/nav.html' %} {% endblock nav %} -->
+    </header>
+    <!-- {% block header %} {% include 'blockFiles/header.html' %} {% endblock header %} -->
+    <main>
+
+    </main>
+    <!-- {% block footer %} {% include 'blockFiles/footer.html' %} {% endblock footer %} -->
+    <footer>
+        <h3>Made by</h3>
+    </footer>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/scripts.js')}}"></script>
+</body>
+</html>
+!
