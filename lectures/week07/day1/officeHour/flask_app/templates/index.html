@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% block head %} {% include 'blockFiles/head.html' %} {% endblock head %}
+<body>
+    {% block header %} {% include 'blockFiles/header.html' %} {% endblock header %}
+    <main>
+        <h1>Hello There from the html file</h1>
+        <h2>Cohort members present for Week 7 Office Hours</h2>
+        <ul>
+            {% for person in present %}
+                <li>{{person}}</li>
+            {% endfor %}
+        </ul>
+        <table>
+            <tr>
+                <th>Device</th>
+                <th>Geek Status</th>
+            </tr>
+            {% for i in info %}
+                <tr>
+                    <td>{{i.device}}</td>
+                    <td>
+                        {% if i.geek == True %}
+                            I'm a Geek
+                        {% else %}
+                            So not a Geek
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    </main>
+    {% block footer %} {% include 'blockFiles/footer.html' %} {% endblock footer %}
+</body>
+</html>

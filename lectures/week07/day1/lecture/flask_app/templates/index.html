@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% block head %} {% include 'blockFiles/head.html' %} {% endblock head %}
+<body>
+    {% block header %} {% include 'blockFiles/header.html' %} {% endblock header %}
+    <main>
+        <h1>Welcome {{name}}</h1>
+
+        <form action="/addSquish/" method="post">
+            <section>
+                <label for="name">Squishy Name</label>
+                <input type="text" name="name">
+            </section>
+            <section>
+                <label for="img">Image URL</label>
+                <input type="text" name="img">
+            </section>
+            <button>Add Squishy</button>
+        </form>
+        <h3>Added Squishies</h3>
+        <div class="row squish">
+            
+            {% for squish in squishies %}
+                <div class="aSquish">
+                    <img src="{{squish.img}}" alt="{{squish.name}}">
+                    <h2>{{squish.name}}</h2>
+                </div>
+            {% endfor %}
+        </div>
+    </main>
+    {% block footer %} {% include 'blockFiles/footer.html' %} {% endblock footer %}
+</body>
+</html>
