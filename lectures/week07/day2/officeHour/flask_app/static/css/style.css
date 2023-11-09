@@ -1,0 +1,106 @@
+@font-face {
+  font-family: 'Bungee Spice';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/bungeespice/v11/nwpTtK2nIhxE0q-IwgSpZBqCzw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Butcherman';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/butcherman/v24/2EbiL-thF0loflXUBOdb1zU.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'DotGothic16';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/dotgothic16/v17/v6-QGYjBJFKgyw5nSoDAGE7L.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway Dots';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ralewaydots/v16/6NUR8FifJg6AfQvzpshgwJ8kyQ.ttf) format('truetype');
+}
+body {
+  --google-font-color-bungeespice: none;
+}
+.flexrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.flexcolumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+table,
+tr,
+td,
+th {
+  border: 2px double #145555;
+}
+a {
+  text-decoration: none;
+  color: #e7e7da;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #2f252f;
+  color: #e7e7da;
+}
+body header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+}
+body header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+  justify-content: space-evenly;
+}
+body main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+}
+body main .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 95%;
+}
+body main .row .column {
+  margin: 1em;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: #ff00ff dotted 2px;
+}
+body footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Butcherman&family=DotGothic16&family=Raleway+Dots&display=swap');
+// font-family: 'Bungee Spice';
+// font-family: Butcherman;
+// font-family: DotGothic16;
+// font-family: 'Raleway Dot'
+
+.flexrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.flexcolumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+table, tr, td, th {
+    border: 2px double @border;
+}
+a {
+    text-decoration: none;
+    color: @font;
+}
+// h1 {
+//     // font-family: Butcherman;
+//     font-family: 'Bungee Spice';
+//     font-size: 3.2em;
+// }
+// h2 {
+//     font-family: 'Bungee Spice';
+//     font-size: 2.6em;
+// }
+// h3 {
+//     font-family: DotGothic16;
+//     font-size: 2.2em;
+// }
+// p {
+//     font-family: 'Raleway Dot';
+//     font-size: 1.2em;
+// }
+
+@border: #145555;
+@font: #e7e7da;
+@bg: #2f252f;
+@altBorder: #ff00ff;
+
+
+body {
+    .flexcolumn();
+    background-color: @bg;
+    color: @font;
+
+    header {
+        .flexcolumn();
+        width: 95%;
+
+        nav {
+            .flexrow();
+            width: 85%;
+            justify-content: space-evenly;
+        }
+    }
+    main {
+        .flexcolumn();
+        width: 95%;
+
+        .row {
+            .flexrow();
+            justify-content: space-evenly;
+            width: 95%;
+
+            .column {
+                margin: 1em;
+                padding: 1em;
+                .flexcolumn();
+                border: @altBorder dotted 2px;
+            }
+        }
+    }
+    footer {
+        .flexcolumn();
+    }
+}

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    {% block nav %}
+        <nav>
+            <a href="/">Home</a>
+            <a href="/quote/add/">Add Quote</a>
+            {% if name != "Guest" %}
+                <a href="/logout/">Logout {{name}}</a>
+            {% endif %}
+        </nav>
+    {% endblock nav %}
+</body>
+</html>

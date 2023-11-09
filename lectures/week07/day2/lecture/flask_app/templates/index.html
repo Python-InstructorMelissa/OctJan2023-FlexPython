@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% block head %} {% include 'blockFiles/head.html' %} {% endblock head %}
+<body>
+    {% block header %} {% include 'blockFiles/header.html' %} {% endblock header %}
+    <main>
+        <div class="row">
+            <div class="column">
+                <h1>Quotes</h1>
+                {% if name != "Guest" %}
+                    <h2>Thanks for the quote {{name}}!!!</h2>
+                {% endif %}
+                <div class="row">
+                    {% for q in quotes %}
+                        <div class="column">
+                            <h3>- {{q.line01}}</h3>
+                            {% if q.line02 %}
+                                <h3>- {{q.line02}}</h3>
+                            {% else %}
+                                
+                            {% endif %}
+                            <h3>Added by {{q.name}}</h3>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="column">
+                <h1>Contributors</h1>
+                {% for u in users %}
+                    <div class="column">
+                        <h3>{{u.name}}</h3>
+                        <h3>{{u.count}}</h3>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </main>
+    {% block footer %} {% include 'blockFiles/footer.html' %} {% endblock footer %}
+</body>
+</html>

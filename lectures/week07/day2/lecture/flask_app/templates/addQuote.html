@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% block head %} {% include 'blockFiles/head.html' %} {% endblock head %}
+<body>
+    {% block header %} {% include 'blockFiles/header.html' %} {% endblock header %}
+    <main>
+        <h1>Add Quote</h1>
+        <form action="/quote/create/" method="post">
+            <section>
+                <label for="line01">Quote:</label>
+                <textarea name="line01" cols="30" rows="10"></textarea>
+            </section>
+            <section>
+                <label for="line02">Quote (optional 2nd line)</label>
+                <textarea name="line02" cols="30" rows="10"></textarea>
+            </section>
+            {% if name == "Guest" %}
+                <section>
+                    <label for="name">Added By</label>
+                    <input type="text" name="name" id="">
+                </section>
+            {% else %}
+                <section>
+                    <label for="name">Added By</label>
+                    <input type="text" name="name" value="{{name}}">
+                </section>
+            {% endif %}
+            <button>Add Quote</button>
+        </form>
+    </main>
+    {% block footer %} {% include 'blockFiles/footer.html' %} {% endblock footer %}
+</body>
+</html>
