@@ -1,0 +1,39 @@
+.flexrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.flexcolumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    .flexcolumn();
+    width: 85%;
+    padding: 2em;
+
+    .row {
+        .flexrow();
+        width: 95%;
+        margin: 1em;
+    }
+    .newRow {
+        justify-content: space-evenly;
+
+        .column {
+            .flexcolumn();
+            border: 3px black double;
+            width: 400px;
+        }
+    }
+    .column {
+        .flexcolumn();
+        border: 3px black double;
+        width: 95%;
+        margin: 1em;
+    }
+}

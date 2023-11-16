@@ -4,9 +4,16 @@
 <body>
     {% block header %} {% include 'blockFiles/header.html' %} {% endblock header %}
     <main>
+        {{user.id}}
+        {{user.firstName}}
         <div class="row">
             <div class="column">
                 <h2>Users</h2>
+                {% for u in users %}
+                    <div class="box">
+                        <h2>{{u.firstName}}</h2>
+                    </div>
+                {% endfor %}
             </div>
             <div class="column">
                 <h2>Programming quotes</h2>

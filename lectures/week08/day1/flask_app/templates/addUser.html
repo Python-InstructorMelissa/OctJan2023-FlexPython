@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+{% block head %} {% include 'blockFiles/head.html' %} {% endblock head %}
+<body>
+    {% block header %} {% include 'blockFiles/header.html' %} {% endblock header %}
+    <main>
+        <h2>Add a new Garden Owner</h2>
+        <form action="/user/create/" method="post">
+            <section>
+                <label for="firstName">First Name</label>
+                <input type="text" name="firstName" id="">
+            </section>
+            <section>
+                <label for="lastName">Last Name</label>
+                <input type="text" name="lastName" id="">
+            </section>
+            <section>
+                <label for="email">Email Address</label>
+                <input type="email" name="email" id="">
+            </section>
+            <button>Add Owner</button>
+        </form>
+    </main>
+    {% block footer %} {% include 'blockFiles/footer.html' %} {% endblock footer %}
+</body>
+</html>

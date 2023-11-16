@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Magical Alchemist Game</title>
+</head>
+<body>
+    <!-- Essence Point Total -->
+    <div class="row">
+        <label for="essenceTotal">Essence Total</label>
+        <input type="text" name="essenceTotal" id="essenceTotal" value="{{essence}}">
+    </div>
+    <!-- Action Buttons -->
+    <div class="row newRow">
+        <!-- Gathering -->
+        <div class="column">
+            <h3>Gather Herbs</h3>
+            <h3>(Earn: 2-5 Essence Points)</h3>
+            <button><a href="/gather/">Gather</a></button>
+        </div>
+        <!-- Potion Chosen -->
+        <div class="column">
+            <h3>Chose Potion</h3>
+            <h3>(Earn/Lose: -5-15 Essence Points)</h3>
+            <button><a href="/potion/">Chose</a></button>
+        </div>
+        <!-- Outcome -->
+        <div class="column">
+            <h3>Potential Outcomes</h3>
+            <h3>(Earn/Lose: -10-15 Essence Points)</h3>
+            <button><a href="/outcome/">Outcome</a></button>
+        </div>
+    </div>
+    <!-- Activity Box -->
+    <h2>Last Action Performed: {{action}}</h2>
+    <div class="column">
+        {% for activity in activities %}
+            <p>{{activity}}</p>
+        {% endfor %}
+    </div>
+</body>
+</html>

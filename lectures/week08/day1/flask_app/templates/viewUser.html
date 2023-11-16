@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-    {% block head %} {% include 'blockFiles/head.html' %} {% endblock head %}
+{% block head %} {% include 'blockFiles/head.html' %} {% endblock head %}
 <body>
     {% block header %} {% include 'blockFiles/header.html' %} {% endblock header %}
     <main>
-        {{user.id}}
         <h1>{{user.firstName}}</h1>
-        <h3>You are already logged in</h3>
     </main>
     {% block footer %} {% include 'blockFiles/footer.html' %} {% endblock footer %}
 </body>

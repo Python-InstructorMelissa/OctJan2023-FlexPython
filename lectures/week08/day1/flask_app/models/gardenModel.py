@@ -1,0 +1,22 @@
+# Herb Gardens Data
+herb_gardens_data = [
+    {"id": 1, "user_id": 1, "gardenName": "Merlin's Enchanted Garden", "location": "Outdoor", "herb_id": 1},
+    {"id": 2, "user_id": 1, "gardenName": "Merlin's Enchanted Garden", "location": "Outdoor", "herb_id": 2},
+    {"id": 3, "user_id": 1, "gardenName": "Merlin's Enchanted Garden", "location": "Outdoor", "herb_id": 3},
+    {"id": 4, "user_id": 1, "gardenName": "Merlin's Enchanted Garden", "location": "Outdoor", "herb_id": 7},
+    {"id": 5, "user_id": 2, "gardenName": "Morgan's Mystical Oasis", "location": "Outdoor", "herb_id": 4},
+    {"id": 6, "user_id": 2, "gardenName": "Morgan's Mystical Oasis", "location": "Outdoor", "herb_id": 5},
+    {"id": 7, "user_id": 2, "gardenName": "Morgan's Mystical Oasis", "location": "Outdoor", "herb_id": 6},
+    {"id": 8, "user_id": 2, "gardenName": "Morgan's Mystical Oasis", "location": "Outdoor", "herb_id": 8},
+    {"id": 9, "user_id": 3, "gardenName": "Gandalf's Green Retreat", "location": "Indoor", "herb_id": None},
+    {"id": 10, "user_id": 4, "gardenName": "Hermione's Herbal Haven", "location": "Outdoor", "herb_id": 7},
+    {"id": 11, "user_id": 4, "gardenName": "Hermione's Herbal Haven", "location": "Outdoor", "herb_id": 8},
+    {"id": 12, "user_id": 5, "gardenName": "Bilbo's Botanical Paradise", "location": "Indoor", "herb_id": 1},
+    {"id": 13, "user_id": 5, "gardenName": "Bilbo's Botanical Paradise", "location": "Indoor", "herb_id": 2},
+    {"id": 14, "user_id": 5, "gardenName": "Bilbo's Botanical Paradise", "location": "Indoor", "herb_id": 3},
+    {"id": 15, "user_id": 6, "gardenName": "Arwen's Elven Sanctuary", "location": "Outdoor", "herb_id": 4},
+    {"id": 16, "user_id": 6, "gardenName": "Arwen's Elven Sanctuary", "location": "Outdoor", "herb_id": 5},
+    {"id": 17, "user_id": 6, "gardenName": "Arwen's Elven Sanctuary", "location": "Outdoor", "herb_id": 6},
+    {"id": 18, "user_id": 5, "gardenName": "Bilbo's Second Garden", "location": "Outdoor", "herb_id": 4},
+    {"id": 19, "user_id": 2, "gardenName": "Morgan's Secret Garden", "location": "Indoor", "herb_id": None},
+]

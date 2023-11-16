@@ -1,0 +1,57 @@
+.flexrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.flexcolumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+table, tr, td, th {
+    border: 2px double @border;
+}
+a {
+    color: @font;
+    border: 5px groove @border;
+    padding: .5em;
+    margin: .5em;
+}
+li {
+    margin: 2em;
+}
+
+@bg: black;
+@font: silver;
+@border: cyan;
+
+
+body {
+    .flexcolumn();
+    background-color: @bg;
+    color: @font;
+    width: 95%;
+
+    header {
+        .flexcolumn();
+        border: 5px groove @border;
+        padding: 1em;
+        width: 90%;
+
+        nav {
+            .flexrow();
+            width: 100%;
+        }
+    }
+    main {
+        .flexcolumn();
+        width: 90%;
+    }
+    footer {
+        .flexcolumn();
+        width: 90%;
+    }
+}
