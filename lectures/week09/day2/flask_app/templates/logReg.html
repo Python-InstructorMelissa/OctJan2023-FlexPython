@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Login / Register</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to our Image app</h1>
+        <nav>
+
+        </nav>
+    </header>
+    <main>
+        <div class="row">
+            <form action="/registration/" method="post">
+                <section>
+                    <label for="first_name">First Name</label>
+                    <input type="text" name="first_name">
+                </section>
+                <section>
+                    <label for="last_name">Last Name</label>
+                    <input type="text" name="last_name">
+                </section>
+                <section>
+                    <label for="username">Username</label>
+                    <input type="text" name="username">
+                </section>
+                <section>
+                    <label for="email">Email</label>
+                    <input type="email" name="email">
+                </section>
+                <button>Register and Login</button>
+            </form>
+            <form action="/login/" method="post">
+                <section>
+                    <label for="username">Username</label>
+                    <input type="text" name="username">
+                </section>
+                <button>Login</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        
+    </footer>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/scripts.js')}}"></script>
+</body>
+</html>

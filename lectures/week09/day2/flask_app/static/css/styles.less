@@ -1,0 +1,48 @@
+.flexrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.flexcolumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+a {
+    text-decoration: none;
+}
+@bg: #300a3c;
+@font: #cbc1ac;
+@blue: #69d1e4;
+@red: #ce7e7e;
+
+
+body {
+    .flexcolumn();
+    background-color: @bg;
+    color: @font;
+
+    header {
+        .flexcolumn();
+        width: 95%;
+        background-color: @blue;
+        color: @bg;
+    }
+    main {
+        .flexcolumn();
+        width: 95%;
+        border: 5px double @red;
+
+        .row {
+            .flexrow();
+        }
+    }
+    footer {
+        .flexcolumn();
+        width: 95%;
+        background-color: @blue;
+        color: @bg;
+    }
+}
