@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Add Image, {{user.first_name}}</title>
+</head>
+<body>
+    <header>
+        <h1>Add Image, {{user.first_name}}</h1>
+        <nav>
+            <a href="/logout/">Logout</a>
+            <a href="/image/add/">Add Image</a>
+            <a href="/">Home</a>
+        </nav>
+    </header>
+    <main>
+        <form action="/image/create" method="post">
+            <section>
+                <label for="title">Title of Image</label>
+                <input type="text" name="title">
+            </section>
+            <section>
+                <label for="url">Image Link</label>
+                <input type="text" name="url">
+            </section>
+            <input type="hidden" name="user_id" value="{{user.id}}">
+            <button>Add Image</button>
+        </form>
+    </main>
+</body>
+</html>

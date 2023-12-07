@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>{{user.first_name}} Dashboard</title>
+</head>
+<body>
+    <header>
+        <h1>{{user.first_name}} Dashboard</h1>
+        <nav>
+            <a href="/logout/">Logout</a>
+            <a href="/image/add/">Add Image</a>
+            <a href="/">Home</a>
+        </nav>
+    </header>
+    <main>
+        <div class="row">
+            <div class="column">
+                <h2>All the Users</h2>
+                <div class="userBox">
+                    {% for u in users %}
+                        <h3>{{u.first_name}} {{u.last_name}} -> {{u.username}}</h3>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="column">
+                <h2>All the Images</h2>
+                {% for image in images %}
+                    <div class="userBox">
+                        <img src="{{image.url}}" alt="{{image.title}}">
+                        <h4>{{image.title}}</h4>
+                        <button><a href="/image/{{image.id}}/view/">View Image</a></button>
+                        <!-- Only the logged in user should be able to edit or delete their content -->
+                        {% if image.user_id == user.id %}
+                            <button><a href="/image/{{image.id}}/edit/">Edit Image</a></button>
+                            <button><a href="/image/{{image.id}}/delete/">Delete Image</a></button>
+                        {% endif %}
+                        
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </main>
+</body>
+</html>
