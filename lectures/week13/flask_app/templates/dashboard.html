@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>User Validations and Registration</title>
+</head>
+<body>
+    <header>
+        <h1><span class="red">Welcome</span> <span class="green">to</span> <span class="red">Week</span> <span class="green">13</span></h1>
+        {% if user %}
+            <h2><span class="red">User: </span><span class="green">{{user.firstName}}</span></h2>
+            <nav>
+                <a href="/logout/">Logout</a>
+            </nav>
+        {% endif %}
+        
+    </header>
+    {% block flash %}
+        <div class="messages">
+            {% with messages = get_flashed_messages() %}
+                {%if messages %}
+                    {% for m in messages %}
+                        <h5>{{m}}</h5>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </div>  
+    {% endblock flash %}
+    <main>
+
+    </main>
+</body>
+</html>

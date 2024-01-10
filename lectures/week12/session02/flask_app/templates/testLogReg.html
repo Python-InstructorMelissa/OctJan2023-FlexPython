@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>User Validations and Registration</title>
+</head>
+<body>
+    <header>
+        <h1><span class="red">Welcome</span> <span class="green">to</span> <span class="red">Week</span> <span class="green">12</span></h1>
+        {% if owner %}
+            <h2><span class="red">Owner: </span><span class="green">{{owner}}</span></h2>
+        {% endif %}
+        <nav>
+            <a href="/logout/">Logout</a>
+        </nav>
+    </header>
+    {% block flash %}
+        <div class="messages">
+            {% with messages = get_flashed_messages() %}
+                {%if messages %}
+                    {% for m in messages %}
+                        <h5>{{m}}</h5>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </div>  
+    {% endblock flash %}
+    <main>
+        <form action="/create/owner/" method="post">
+            <section>
+                <label for="first_name">Please Add your first Name</label>
+                <input type="text" name="first_name" id="">
+            </section>
+            <section>
+                <label for="last_name">Please Add your last Name</label>
+                <input type="text" name="last_name" id="">
+            </section>
+            <section>
+                <label for="email">Please Add your first Name</label>
+                <input type="email" name="email" id="">
+            </section>
+            <section>
+                <label for="password">Please Add your first Name</label>
+                <input type="password" name="password" id="">
+            </section>
+            <section>
+                <label for="confirm">Please Add your first Name</label>
+                <input type="password" name="confirm" id="">
+            </section>
+            <button>Submit</button>
+        </form>
+    </main>
+</body>
+</html>
