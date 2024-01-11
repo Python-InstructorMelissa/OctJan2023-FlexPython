@@ -1,0 +1,73 @@
+.flexrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.flexcolumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.a {
+  color: #00008b;
+  text-decoration: none;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #00008b;
+  color: #ffebcd;
+}
+body header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+}
+body header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffebcd;
+  width: 85%;
+  justify-content: space-evenly;
+}
+body header nav a {
+  color: #00008b;
+  text-decoration: none;
+}
+body .messages {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body .messages h5 {
+  margin: 1em;
+  padding: 1em;
+  background-color: #ff0000;
+}
+body main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body main .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+body main .row form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

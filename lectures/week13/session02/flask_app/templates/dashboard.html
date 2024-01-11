@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Testing</title>
+</head>
+<body>
+    {% block header %} {% include 'blockFiles/header.html' %} {% endblock header %}
+    {% block flash %}
+        <div class="messages">
+            {% with messages = get_flashed_messages() %}
+            <!-- Looks for any flash messages created and puts them in a messages list -->
+                {% if messages %}
+                <!--  If there is a messages list -->
+                    {% for m in messages %}
+                    <!-- Loop through all the lines in the list and print out as an h5 -->
+                        <h5>{{m}}</h5>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </div>  
+    {% endblock flash %}
+    <main>
+        <h1>Welcome {{user.first_name}}</h1>
+    </main>
+</body>
+</html>

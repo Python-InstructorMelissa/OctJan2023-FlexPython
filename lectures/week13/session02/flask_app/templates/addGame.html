@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Add Game</title>
+</head>
+<body>
+    {% block header %} {% include 'blockFiles/header.html' %} {% endblock header %}
+    {% block flash %}
+        <div class="messages">
+            {% with messages = get_flashed_messages() %}
+            <!-- Looks for any flash messages created and puts them in a messages list -->
+                {% if messages %}
+                <!--  If there is a messages list -->
+                    {% for m in messages %}
+                    <!-- Loop through all the lines in the list and print out as an h5 -->
+                        <h5>{{m}}</h5>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </div>  
+    {% endblock flash %}
+    <main>
+        <div class="row">
+            <h1>Add Game Scores</h1>
+            <h1>{{user.first_name}}</h1>
+        </div>
+        <form action="/game/create/" method="post">
+            <h2>Add Game</h2>
+            <section>
+                <label for="team1">Team 1</label>
+                <input type="text" name="team1" id="">
+            </section>
+            <section>
+                <label for="team2">Team 2</label>
+                <input type="text" name="team2" id="">
+            </section>
+            <section>
+                <label for="final_score">The Final Score</label>
+                <input type="text" name="final_score" id="">
+            </section>
+            <section>
+                <label for="game_info">Game Information</label>
+                <textarea name="game_info" id="" cols="30" rows="10"></textarea>
+            </section>
+            <section>
+                <label for="game_date">Game Date</label>
+                <input type="date" name="game_date" id="">
+            </section>
+            <input type="hidden" name="user_id" value="{{user.id}}">
+            <button>Add Game</button>
+        </form>
+    </main>
+</body>
+</html>
